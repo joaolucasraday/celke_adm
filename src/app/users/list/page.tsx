@@ -1,5 +1,7 @@
 'use client'
 import instance from "@/src/services/api";
+//Importar componente para criar Link
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 interface User{
@@ -45,6 +47,7 @@ export default function Users(){
         <div>
 
             <h1>Listar Usuários</h1>
+            <Link href={'/users/create'}>Cadastrar</Link>
             {/*Exibe mensagem de erro*/}
             {error && <p style={{color: "#f00"}}>{error}</p>}
             <table>
